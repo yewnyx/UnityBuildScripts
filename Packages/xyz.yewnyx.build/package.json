@@ -1,0 +1,12 @@
+{
+  "name": "xyz.yewnyx.build",
+  "version": "0.0.1",
+  "displayName": "Build Scripts",
+  "description": "Custom build scripts",
+  "unity": "6000.0",
+  "unityRelease": "5f1",
+  "author": {
+    "name": "Yewnyx",
+    "email": "yewnyx@yewnyx.xyz"
+  }
+}

@@ -8,11 +8,18 @@ using UnityEngine;
 namespace xyz.yewnyx.build
 {
     public static class BuildScript {
-        public static void SwitchPlatfom()
-        {
-            EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneLinux64);
-            EditorUserBuildSettings.standaloneBuildSubtarget = StandaloneBuildSubtarget.Server;
-
+        [MenuItem("yewnyx/Build/Find Build Profiles")]
+        public static void FindBuildProfiles() {
+            var profiles = AssetDatabase.FindAssets("t:UnityEditor.Build.Profile.BuildProfile", new []{"Assets/Settings/Build Profiles"});
+            foreach (var profile in profiles) {
+                Debug.Log(AssetDatabase.GUIDToAssetPath(profile));
+            }
+        }
+        
+        
+        public static void SwitchProfile() {
+            // Do stuff...?
+            EditorApplication.Exit(0);
         }
         
         public static void Build() {
